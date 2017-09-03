@@ -24,9 +24,6 @@
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <a href="{{route('facebook.login')}}" class="btn btn-primary btn-block">Kyquni me Facebook</a>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6">
-                        <a href="{{route('google.login')}}" class="btn btn-danger btn-block">Kyquni me Google</a>
-                    </div>
                 </div>
               <hr class="colorgraph">
               <div class="row">

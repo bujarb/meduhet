@@ -29,11 +29,7 @@
               <td>{{$user->email}}</td>
               <td>{{$user->roles()->pluck('name')->first()}}</td>
               <td>
-                @if($user->facebook_user_id && $user->google_user_id)
-                  Facebook / Google
-                @elseif($user->google_user_id)
-                  Google
-                @elseif($user->facebook_user_id)
+                @if($user->facebook_user_id)
                   Facebook
                 @endif
               </td>
