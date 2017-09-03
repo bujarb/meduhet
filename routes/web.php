@@ -23,6 +23,9 @@ Route::get('kontaktoni',[
 Route::get('login/facebook', 'FacebookLoginController@redirectToProvider')->name('facebook.login');
 Route::get('login/facebook/callback', 'FacebookLoginController@handleProviderCallback');
 
+Route::get('login/google', 'GoogleLoginController@redirectToProvider')->name('google.login');
+Route::get('login/google/callback', 'GoogleLoginController@handleProviderCallback');
+
 Route::group(['middleware' => 'auth'], function () {
 	Route::group(['middleware' => 'admin'], function (){
 		Route::group(['prefix'=>'admin'],function (){
