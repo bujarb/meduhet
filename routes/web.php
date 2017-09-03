@@ -20,8 +20,8 @@ Route::get('kontaktoni',[
 	'as'=>'contact'
 ]);
 
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('facebook.login');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/facebook', 'FacebookLoginController@redirectToProvider')->name('facebook.login');
+Route::get('login/facebook/callback', 'FacebookLoginController@handleProviderCallback');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::group(['middleware' => 'admin'], function (){
