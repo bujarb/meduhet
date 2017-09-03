@@ -39,6 +39,7 @@ class GoogleLoginController extends Controller
             $user->email = $googleuser->getEmail();
             $user->profilepic = $googleuser->getAvatar();
             $user->google_user_id = $googleuser->getId();
+            $user->assignRole('user');
             $user->save();
         }else{
             $user->google_user_id = $googleuserid;

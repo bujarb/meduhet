@@ -16,6 +16,7 @@
             <th>Lastname</th>
             <th>Email</th>
             <th>Role</th>
+            <th>Linked Accounts</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -27,6 +28,15 @@
               <td>{{$user->lastname}}</td>
               <td>{{$user->email}}</td>
               <td>{{$user->roles()->pluck('name')->first()}}</td>
+              <td>
+                @if($user->facebook_user_id && $user->google_user_id)
+                  Facebook / Google
+                @elseif($user->google_user_id)
+                  Google
+                @elseif($user->facebook_user_id)
+                  Facebook
+                @endif
+              </td>
               <td><a href="{{route('user-edit',$user->id)}}" class="btn btn-primary btn-sm">Edit</a></td>
               <td>
                 <form action="{{route('user-delete',$user->id)}}" method="post">
