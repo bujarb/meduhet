@@ -2,7 +2,7 @@
 
 @section('content')
   <div>
-    <h1 class="text-center">Update {{$user->firstname}}'s profile</h1>
+    <h1 class="text-center">Update {{$user->name}}'s profile</h1>
   </div>
   <hr />
   <div class="row">
@@ -10,8 +10,8 @@
       <form action="{{route('user-update',$user->id)}}" method="post">
         {{csrf_field()}}
         <div class="form-group">
-          <label for="firstname">Emri</label>
-          <input type="text" name="firstname" id="firstname" class="form-control" value="{{$user->firstname}}"/>
+          <label for="name">Emri</label>
+          <input type="text" name="name" id="name" class="form-control" value="{{$user->name}}"/>
         </div>
         <div class="form-group">
           <label for="lastname">Mbriemri</label>

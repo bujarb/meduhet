@@ -37,7 +37,7 @@
               <td>{{$need->priceTo}}</td>
               <td>{{$need->category->pluck('name')->first()}}</td>
               <td>{{$need->city->pluck('name')->first()}}</td>
-              <td>{{$need->user->pluck('firstname')->first()}}</td>
+              <td>{{$need->user->pluck('name')->first()}}</td>
               <td>
                 <form action="{{route('admin-need-delete',$need->id)}}" method="post">
                   {{csrf_field()}}

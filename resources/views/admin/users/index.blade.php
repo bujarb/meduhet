@@ -12,7 +12,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Firstname</th>
+            <th>name</th>
             <th>Lastname</th>
             <th>Email</th>
             <th>Role</th>
@@ -23,7 +23,7 @@
         <tbody>
           @foreach($users  as $user)
             <tr>
-              <td>{{$user->firstname}}</td>
+              <td>{{$user->name}}</td>
               <td>{{$user->lastname}}</td>
               <td>{{$user->email}}</td>
               <td>{{$user->roles()->pluck('name')->first()}}</td>

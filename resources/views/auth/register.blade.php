@@ -9,7 +9,7 @@
               <h2>Ju lutem kyquni</h2>
               <hr class="colorgraph">
               <div class="form-group">
-                      <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First Name">
+                      <input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name">
               </div>
               <div class="form-group">
                           <input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Last Name">

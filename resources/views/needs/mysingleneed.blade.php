@@ -29,7 +29,7 @@
           <p><strong>Telefoni:</strong>: {{$need->phone_number}}</p>
         </div>
         <div class="col-md-2">
-          <p><strong>Postuar Nga:</strong>: {{$need->user->pluck('firstname')->first()}}</p>
+          <p><strong>Postuar Nga:</strong>: {{$need->user->pluck('name')->first()}}</p>
         </div>
       </div>
       <div class="row description border martop">

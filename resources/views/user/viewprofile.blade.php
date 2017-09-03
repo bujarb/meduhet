@@ -33,7 +33,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <span>
-                        <h1 class="panel-title pull-left" style="font-size:30px;">{{$user->firstname}} {{$user->lastname}}<small> {{$user->email}}</small></h1>
+                        <h1 class="panel-title pull-left" style="font-size:30px;">{{$user->name}} {{$user->lastname}}<small> {{$user->email}}</small></h1>
                         <div class="dropdown pull-right">
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <li><a href="#">Familly</a></li>
@@ -68,7 +68,7 @@
                           <div class="col-xs-12 col-sm-12 col-md-3 borright">
                             <ul class="meta-search">
                               <li><i class="glyphicon glyphicon-calendar"></i> <span>{{$need->created_at->format('M d Y')}}</span></li>
-                              <li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$need->user()->pluck('firstname')->first()}}</span></li>
+                              <li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$need->user()->pluck('name')->first()}}</span></li>
                               <li><i class="glyphicon glyphicon-tags"></i> <span><strong>Nr. Telefonit:</strong> {{$need->phone_number}}</span></li>
                             </ul>
                           </div>

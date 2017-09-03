@@ -29,7 +29,7 @@
           <p><strong>Telefoni:</strong>: {{$product->phone_number}}</p>
         </div>
         <div class="col-md-2">
-          <p><strong>Postuar Nga:</strong>: {{DB::table('users')->where('id','=',$product->user_id)->pluck('firstname')->first()}}</p>
+          <p><strong>Postuar Nga:</strong>: {{DB::table('users')->where('id','=',$product->user_id)->pluck('name')->first()}}</p>
         </div>
       </div>
       <div class="row description border martop">

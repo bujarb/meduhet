@@ -24,7 +24,7 @@
 	          			<div class="col-xs-12 col-sm-12 col-md-3 borright">
 	          				<ul class="meta-search">
 	          					<li><i class="glyphicon glyphicon-calendar"></i> <span>{{$need->created_at->format('M d Y')}}</span></li>
-	          					<li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$need->user()->pluck('firstname')->first()}}</span></li>
+	          					<li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$need->user()->pluck('name')->first()}}</span></li>
 	          					<li><i class="glyphicon glyphicon-tags"></i> <span><strong>Qmimi:</strong> {{$need->priceFrom}} - {{$need->priceTo}}</span></li>
 	                    <li><i class="glyphicon glyphicon-tags"></i> <span><strong>Kategoria:</strong> {{$need->category()->pluck('name')->first()}}</span></li>
 											<li><i class="glyphicon glyphicon-tags"></i> <span><strong>Qyteti:</strong> {{$need->city()->pluck('name')->first()}}</span></li>

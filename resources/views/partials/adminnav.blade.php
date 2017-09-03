@@ -16,31 +16,31 @@
         <ul class="nav navbar-nav">
           <li {{{ (Request::is('control-center') ? 'class=active' : '') }}}><a href="{{route('admin-control-center')}}"><i class="fa fa-home" aria-hidden="true"></i>
  Home</span></a></li>
-          @can('manage-users')
+          @can('manage users')
             <li {{{ (Request::is('control-center/users') ? 'class=active' : '') }}}><a href="{{route('user-index')}}"><i class="fa fa-user" aria-hidden="true"></i>
    Users</span></a></li>
           @endcan
-          @can('manage-cities')
+          @can('manage cities')
             <li {{{ (Request::is('control-center/category') ? 'class=active' : '') }}}><a href="{{route('category-index')}}"><i class="fa fa-clone" aria-hidden="true"></i>
   </span> Categories</a></li>
           @endcan
-          @can('manage-categories')
+          @can('manage categories')
             <li {{{ (Request::is('control-center/city') ? 'class=active' : '') }}}><a href="{{route('city-index')}}"><i class="fa fa-university" aria-hidden="true"></i>
    Cities</a></li>
           @endcan
-          @can('manage-permissions')
+          @can('manage permissions')
             <li {{{ (Request::is('control-center/permission') ? 'class=active' : '') }}}><a href="{{route('permission-index')}}"><i class="fa fa-check" aria-hidden="true"></i>
    Permissions</a></li>
           @endcan
-          @can('manage-roles')
+          @can('manage roles')
             <li {{{ (Request::is('control-center/role') ? 'class=active' : '') }}}><a href="{{route('role-index')}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
     Roles</a></li>
           @endcan
-          @can('manage-needs')
+          @can('manage needs')
             <li {{{ (Request::is('control-center/needs') ? 'class=active' : '') }}}><a href="{{route('admin-need-index')}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
            Needs</a></li>
           @endcan
-          @can('manage-products')
+          @can('manage products')
             <li {{{ (Request::is('control-center/products') ? 'class=active' : '') }}}><a href="{{route('admin-product-index')}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
             Products</a></li>
           @endcan
@@ -48,7 +48,7 @@
         <ul class="nav navbar-nav navbar-right">
           @if(Auth::check())
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="a" aria-haspopup="true" aria-expanded="false">{{Auth::user()->firstname}} <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="a" aria-haspopup="true" aria-expanded="false">{{Auth::user()->name}} <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{route('admin-profile')}}">My Profile</a></li>
                 <li><a href="#">Another action</a></li>

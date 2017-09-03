@@ -64,7 +64,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 borright">
                   <ul class="meta-search">
                     <li><i class="glyphicon glyphicon-calendar"></i> <span>{{$need->created_at->format('M d Y')}}</span></li>
-                    <li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$need->user()->pluck('firstname')->first()}}</span></li>
+                    <li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$need->user()->pluck('name')->first()}}</span></li>
                     <li><i class="glyphicon glyphicon-tags"></i> <span><strong>Nr. Telefonit:</strong> {{$need->phone_number}}</span></li>
                   </ul>
                 </div>
@@ -126,7 +126,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 borright">
                   <ul class="meta-search">
                     <li><i class="glyphicon glyphicon-calendar"></i> <span>{{$product->created_at->format('M d Y')}}</span></li>
-                    <li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$product->user()->pluck('firstname')->first()}}</span></li>
+                    <li><i class="glyphicon glyphicon-time"></i> <span><strong>Nga:</strong> {{$product->user()->pluck('name')->first()}}</span></li>
                     <li><i class="glyphicon glyphicon-tags"></i> <span><strong>Nr. Telefonit:</strong> {{$product->phone_number}}</span></li>
                   </ul>
                 </div>

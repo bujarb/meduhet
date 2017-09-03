@@ -35,7 +35,7 @@
               <td>{{$product->price}}</td>
               <td>{{$product->category->pluck('name')->first()}}</td>
               <td>{{$product->city->pluck('name')->first()}}</td>
-              <td>{{$product->user->pluck('firstname')->first()}}</td>
+              <td>{{$product->user->pluck('name')->first()}}</td>
               <td>
                 <form action="{{route('admin-product-delete',$product->id)}}" method="post">
                   {{csrf_field()}}

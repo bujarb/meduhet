@@ -9,7 +9,7 @@
           </div>
           <div class="form-group">
             <label>Emri</label>
-            <input type="text" name="firstname" class="form-control" value="{{$user->firstname}}"/>
+            <input type="text" name="name" class="form-control" value="{{$user->name}}"/>
           </div>
           <div class="form-group">
             <label>Mbiemri</label>

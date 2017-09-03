@@ -43,25 +43,25 @@ Route::group(['middleware' => 'auth'], function () {
 			Route::group(['prefix'=>'users'],function (){
 				Route::get('/',[
 				'uses'=>'AdminController@getUsersIndex',
-				'middleware'=>'rolemid:manage-users',
+				'middleware'=>'rolemid:manage users',
 				'as'=>'user-index'
 				]);
 
 				Route::get('/{user_id}/edit',[
 				'uses'=>'AdminController@getUsersEdit',
-				'middleware'=>'rolemid:manage-users',
+				'middleware'=>'rolemid:manage users',
 				'as'=>'user-edit'
 				]);
 
 				Route::post('/{user_id}/update',[
 				'uses'=>'AdminController@userUpdate',
-				'middleware'=>'rolemid:manage-users',
+				'middleware'=>'rolemid:manage users',
 				'as'=>'user-update'
 				]);
 
 				Route::post('delete/{user_id}',[
 					'uses'=>'AdminController@deleteUser',
-					'middleware'=>'rolemid:manage-users',
+					'middleware'=>'rolemid:manage users',
 					'as'=>'user-delete'
 				]);
 			});
@@ -72,31 +72,31 @@ Route::group(['middleware' => 'auth'], function () {
 			Route::group(['prefix'=>'category'],function (){
 				Route::get('/',[
 				'uses'=>'AdminController@getCategoryIndex',
-				'middleware'=>'rolemid:manage-categories',
+				'middleware'=>'rolemid:manage categories',
 				'as'=>'category-index'
 				]);
 
 				Route::post('create',[
 					'uses'=>'AdminController@categoryStore',
-					'middleware'=>'rolemid:manage-categories',
+					'middleware'=>'rolemid:manage categories',
 					'as'=>'category-store'
 				]);
 
 				Route::get('/{category_id}/edit',[
 				'uses'=>'AdminController@getCategoryEdit',
-				'middleware'=>'rolemid:manage-categories',
+				'middleware'=>'rolemid:manage categories',
 				'as'=>'category-edit'
 				]);
 
 				Route::post('/{category_id}/update',[
 				'uses'=>'AdminController@categoryUpdate',
-				'middleware'=>'rolemid:manage-categories',
+				'middleware'=>'rolemid:manage categories',
 				'as'=>'category-update'
 				]);
 
 				Route::post('/delete/{category_id}',[
 				'uses'=>'AdminController@deleteCategory',
-				'middleware'=>'rolemid:manage-categories',
+				'middleware'=>'rolemid:manage categories',
 				'as'=>'category-delete'
 				]);
 			});
@@ -108,31 +108,31 @@ Route::group(['middleware' => 'auth'], function () {
 			Route::group(['prefix'=>'city'],function (){
 				Route::get('/',[
 				'uses'=>'AdminController@getCityIndex',
-				'middleware'=>'rolemid:manage-cities',
+				'middleware'=>'rolemid:manage cities',
 				'as'=>'city-index'
 				]);
 
 				Route::post('create',[
 					'uses'=>'AdminController@cityStore',
-					'middleware'=>'rolemid:manage-cities',
+					'middleware'=>'rolemid:manage cities',
 					'as'=>'city-store'
 				]);
 
 				Route::get('/{city_id}/edit',[
 				'uses'=>'AdminController@getCityEdit',
-				'middleware'=>'rolemid:manage-cities',
+				'middleware'=>'rolemid:manage cities',
 				'as'=>'city-edit'
 				]);
 
 				Route::post('/{city_id}/update',[
 				'uses'=>'AdminController@cityUpdate',
-				'middleware'=>'rolemid:manage-cities',
+				'middleware'=>'rolemid:manage cities',
 				'as'=>'city-update'
 				]);
 
 				Route::post('/delete/{city_id}',[
 					'uses'=>'AdminController@deleteCity',
-					'middleware'=>'rolemid:manage-cities',
+					'middleware'=>'rolemid:manage cities',
 					'as'=>'city-delete'
 				]);
 			});
@@ -144,37 +144,37 @@ Route::group(['middleware' => 'auth'], function () {
 			Route::group(['prefix'=>'permission'],function (){
 				Route::get('/',[
 					'uses'=>'AdminController@getPermissionIndex',
-					'middleware'=>'rolemid:manage-permissions',
+					'middleware'=>'rolemid:manage permissions',
 					'as'=>'permission-index'
 				]);
 
 				Route::get('/create',[
 					'uses'=>'AdminController@permissionCreate',
-					'middleware'=>'rolemid:manage-permissions',
+					'middleware'=>'rolemid:manage permissions',
 					'as'=>'permission-create'
 				]);
 
 				Route::post('/store',[
 					'uses'=>'AdminController@permissionStore',
-					'middleware'=>'rolemid:manage-permissions',
+					'middleware'=>'rolemid:manage permissions',
 					'as'=>'permission-store'
 				]);
 
 				Route::get('/{permission_id}/edit',[
 					'uses'=>'AdminController@getPermissionEdit',
-					'middleware'=>'rolemid:manage-permissions',
+					'middleware'=>'rolemid:manage permissions',
 					'as'=>'permission-edit'
 				]);
 
 				Route::post('/{permission_id}/update',[
 					'uses'=>'AdminController@permissionEdit',
-					'middleware'=>'rolemid:manage-permissions',
+					'middleware'=>'rolemid:manage permissions',
 					'as'=>'permission-update'
 				]);
 
 				Route::post('/delete/{permission_id}',[
 					'uses'=>'AdminController@permissionDelete',
-					'middleware'=>'rolemid:manage-permissions',
+					'middleware'=>'rolemid:manage permissions',
 					'as'=>'permission-delete'
 				]);
 			});
@@ -186,43 +186,43 @@ Route::group(['middleware' => 'auth'], function () {
 			Route::group(['prefix'=>'role'],function (){
 				Route::get('/',[
 				'uses'=>'AdminController@getRoleIndex',
-				'middleware'=>'rolemid:manage-roles',
+				'middleware'=>'rolemid:manage roles',
 				'as'=>'role-index'
 				]);
 
 				Route::get('/{user_id}/edit',[
 				'uses'=>'AdminController@getRoleEdit',
-				'middleware'=>'rolemid:manage-roles',
+				'middleware'=>'rolemid:manage roles',
 				'as'=>'role-edit'
 				]);
 
 				Route::post('/{user_id}/update',[
 				'uses'=>'AdminController@roleEdit',
-				'middleware'=>'rolemid:manage-roles',
+				'middleware'=>'rolemid:manage roles',
 				'as'=>'role-update'
 				]);
 
 				Route::get('/{role_id}/permissions',[
 				'uses'=>'AdminController@getRolePermissions',
-				'middleware'=>'rolemid:manage-roles',
+				'middleware'=>'rolemid:manage roles',
 				'as'=>'role-permissions'
 				]);
 
 				Route::get('/{role}/addPermission',[
 					'uses'=>'AdminController@addPermissionToRole',
-					'middleware'=>'rolemid:manage-roles',
+					'middleware'=>'rolemid:manage roles',
 					'as'=>'add-permission-to-role'
 				]);
 
 				Route::post('/{role_id}/assignPermission',[
 					'uses'=>'AdminController@assignPermission',
-					'middleware'=>'rolemid:manage-roles',
+					'middleware'=>'rolemid:manage roles',
 					'as'=>'assign-permission-to-role'
 				]);
 
 				Route::post('/delete/{role_id}',[
 					'uses'=>'AdminController@deleteRole',
-					'middleware'=>'rolemid:manage-roles',
+					'middleware'=>'rolemid:manage roles',
 					'as'=>'role-delete'
 				]);
 			});
