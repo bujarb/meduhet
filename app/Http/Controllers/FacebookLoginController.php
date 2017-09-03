@@ -39,9 +39,11 @@ class FacebookLoginController extends Controller
             $user->profilepic = $fbuser->getAvatar();
             $user->facebook_user_id = $fbuser->getId();
             $user->save();
-        };
-
-        Auth::loginUsingId($user->id);
-        return redirect()->route('home');
+        }else{
+            $user->facebook_user_id = $fb_user_id;
+            $user->save();
+            Auth::loginUsingId($user->id);
+            return redirect()->route('home');
+        }
     }
 }
