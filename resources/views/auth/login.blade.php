@@ -1,6 +1,21 @@
 @extends('layouts.main')
 
 @section('content')
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/sq_AL/sdk.js#xfbml=1&version=v2.10&appId=106329286773741";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-3">
+                <a href="{{route('facebook.login')}}" class="btn btn-primary">Login with Facebook</a>
+            </div>
+        </div>
+    </div>
   <div class="row" style="margin-top:20px">
       <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3" style="margin-bottom:20px">
           <form role="form" action="{{route('login')}}" method="post">
@@ -17,7 +32,6 @@
               <span class="button-checkbox">
                 <button type="button" class="btn" data-color="info">Me mbaj mend</button>
                           <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
-                  <a href="{{route('facebook.login')}}" class="btn btn-primary">Facebook Login</a>
                 <a href="" class="btn btn-link pull-right">Harruat fjalekalimin?</a>
               </span>
               <hr class="colorgraph">

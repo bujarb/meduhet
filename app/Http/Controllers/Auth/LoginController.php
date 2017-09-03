@@ -59,13 +59,15 @@ class LoginController extends Controller
     {
         $fbuser = Socialite::driver('facebook')->user();
         $fb_user_id = $fbuser->getId();
-
+        dd($fbuser);
         $user = User::where('facebook_user_id',$fb_user_id)->first();
 
         if (!$user){
             $user = new User();
             $user->name = $fbuser->getName();
+            $user->password = rand(1,1000);
             $user->email = $fbuser->getEmail();
+            $user->profilepic = $fbuser->getAvatar();
             $user->facebook_user_id = $fbuser->getId();
             $user->save();
         };
