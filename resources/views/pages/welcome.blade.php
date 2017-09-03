@@ -47,12 +47,15 @@
                       </div>
                     </div>
                     <div class="row ">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <a href="{{route('compose',$product->user_id)}}" class="btn btn-success btn-block">Kontakto</a>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <a href="{{route('product.single',$product->id)}}" class="btn btn-info btn-block">Shiko</a>
                       </div>
+                        <div class="col-md-4">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=YourPageLink.com&display=popup" class="btn btn-primary btn-block">Shperndaje</a>
+                        </div>
                     </div>
             			</div>
             			<span class="clearfix borda"></span>
@@ -112,12 +115,15 @@
                       </div>
                     </div>
                     <div class="row ">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <a href="#" class="btn btn-success btn-block">Kontakto</a>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <a href="{{route('need.single',$need->id)}}" class="btn btn-info btn-block">Shiko</a>
                       </div>
+                        <div class="col-md-4">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=YourPageLink.com&display=popup" class="btn btn-primary btn-block">Shperndaje</a>
+                        </div>
                     </div>
             			</div>
             			<span class="clearfix borda"></span>

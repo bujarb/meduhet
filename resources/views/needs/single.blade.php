@@ -31,6 +31,9 @@
         <div class="col-md-2">
           <p><strong>Postuar Nga:</strong>: {{$need->user->pluck('name')->first()}}</p>
         </div>
+        <div class="col-md-2">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=YourPageLink.com&display=popup">Shperndaje</a>
+        </div>
       </div>
       <div class="row description border martop">
         <div class="col-md-10 col-md-offset-1">
